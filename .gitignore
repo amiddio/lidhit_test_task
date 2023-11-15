@@ -8,3 +8,6 @@ venv/
 
 # Environments
 .env
+
+# TestCase
+test_db.json
