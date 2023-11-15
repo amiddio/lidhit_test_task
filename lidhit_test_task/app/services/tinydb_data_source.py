@@ -18,9 +18,16 @@ class TinydbDataSource(ValidationMixin, DataSource):
         self.data = data
 
     def get_form(self) -> str | dict:
+        """
+        Сначало метод делает валидацию и приведение типов полученных данных. Переводит их во множество.
+        После пробегаемся по коллекции шаблонов форм из БД.
+        Каждый элемент итерации также переводим во множество.
+        Форма считается найденной если она является подмножеством пришедших данных.
+        :return: str | dict
+        """
         converted_fields = self._convert_field_value()
 
-        fields_from_request = (set(converted_fields.items()))
+        fields_from_request = set(converted_fields.items())
         for frm in self._get_all_templates():
             name = frm.pop('name')
             form_template = set(frm.items())
