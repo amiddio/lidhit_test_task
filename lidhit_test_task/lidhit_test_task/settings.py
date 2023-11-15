@@ -137,3 +137,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DB_NAME = 'db.json'
+TEST_DB_NAME = 'test_db.json'
