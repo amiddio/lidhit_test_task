@@ -17,6 +17,7 @@
   * DEBUG=on
   * SECRET_KEY='some_key'
 * Запускаем веб-сервер: python manage.py runserver
+* Url на который идут post запросы: http://127.0.0.1:8000/get_form
 
 ## Тестирование проекта
 
